@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Account | True Spring Bank</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="auth-page">
+    <div class="auth-wrapper">
+        <div class="auth-content">
+            <h2>Create your account</h2>
+            <p>Let's get started</p>
+            
+            <form id="signupForm">
+                <div id="errorMessage" class="error-msg"></div>
+                
+                <div class="input-group">
+                    <label>Full name:</label>
+                    <div class="input-wrapper">
+                        <input type="text" id="fullName" required>
+                        <i class="fa-regular fa-user"></i>
+                    </div>
+                </div>
+                <div class="input-group">
+                    <label>Email:</label>
+                    <div class="input-wrapper">
+                        <input type="email" id="email" required>
+                        <i class="fa-regular fa-envelope"></i>
+                    </div>
+                </div>
+                <div class="input-group">
+                    <label>Password:</label>
+                    <div class="input-wrapper">
+                        <input type="password" id="password" required>
+                        <i class="fa-solid fa-lock"></i>
+                    </div>
+                </div>
+                <div class="input-group">
+                    <label>Confirm Password:</label>
+                    <div class="input-wrapper">
+                        <input type="password" id="confirmPassword" required>
+                        <i class="fa-solid fa-lock"></i>
+                    </div>
+                </div>
+                <button type="submit" class="btn-black-long">Create Account</button>
+            </form>
+            <p class="auth-switch">Already have an account? <a href="login.html">Sign in</a></p>
+        </div>
+        <div class="auth-image-container">
+            <img src="assets/digital.jpg" alt="Banking Team">
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

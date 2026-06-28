@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Dashboard | True Spring Bank</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="dashboard-page">
+    <div class="dashboard-wrapper">
+        <aside class="sidebar">
+            <div class="logo">
+                <img src="assets/logo.png" alt="Logo">
+                <span>TRUESPRING BANK</span>
+            </div>
+            <nav class="side-nav">
+                <a href="dashboard.html" class="nav-item active"><i class="fa-solid fa-house"></i> Dashboard</a>
+                <a href="transactions.html" class="nav-item"><i class="fa-solid fa-clock-rotate-left"></i> Transactions</a>
+                <a href="kyc2.html" class="nav-item"><i class="fa-solid fa-wallet"></i> Accounts</a>
+                <a href="kyc2.html" class="nav-item"><i class="fa-solid fa-credit-card"></i> Payments</a>
+                <div class="nav-divider"></div>
+                <a href="#" id="logoutBtn" class="nav-item logout"><i class="fa-solid fa-right-from-bracket"></i> Log Out</a>
+            </nav>
+            <div class="help-box " onclick="location.href='chatbot.html'">
+                <p>Need Help?</p>
+                <small>Contact our customer service team</small>
+            </div>
+        </aside>
+
+        <main class="main-content">
+    <header class="dash-header">
+        <h2 id="welcomeName">Welcome, User</h2>
+        <div class="user-profile">
+            <i class="fa-solid fa-bell"></i>
+            <i class="fa-solid fa-gear"></i>
+            <i class="fa-solid fa-circle-user"></i>
+        </div>
+    </header>
+
+    <section class="balance-card">
+        <div class="balance-info">
+            <p class="label">Total Balance</p>
+            <div class="amount-row">
+                <h1 id="accountBalance">$0.00</h1>
+                <i class="fa-solid fa-eye-slash" id="toggleBalance" style="cursor: pointer;"></i>
+            </div>
+            <small class="acc-number">**** **** 875 389</small>
+        </div>
+        <button class="btn-add-money">Add Money</button>
+    </section>
+
+    <section class="quick-actions">
+        <div class="section-header">
+            <h3 style="margin-top: 15px;">Quick Actions</h3>
+        </div>
+        <div class="action-grid">
+            <div class="action-card" onclick="location.href='kyc.html'">
+                <i class="fa-solid fa-right-left"></i>
+                <p>Transfer</p>
+            </div>
+            <div class="action-card" onclick="location.href='kyc2.html'">
+                <i class="fa-solid fa-file-invoice-dollar"></i>
+                <p>Pay Bills</p>
+            </div>
+            <div class="action-card" onclick="location.href='kyc2.html'">
+                <i class="fa-solid fa-money-bill-transfer"></i>
+                <p>Deposit</p>
+            </div>
+        </div>
+    </section>
+
+<section class="recent-activity">
+    <div class="section-header">
+        <h3 style="margin-top: 15px;">Recent Activity</h3>
+        <a href="transactions.html" class="view-all">View Full History</a>
+    </div>
+    <table class="activity-table">
+        <thead>
+            <tr>
+                <th>Date</th>
+                <th>Description</th>
+                <th>Amount</th>
+            </tr>
+        </thead>
+        <tbody id="quickTransactionListBody">
+            </tbody>
+    </table>
+</section>
+
+    <div class="chat-trigger" onclick="location.href='chatbot.html'">
+        <i class="fa-solid fa-comment-dots"></i>
+    </div>
+</main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
